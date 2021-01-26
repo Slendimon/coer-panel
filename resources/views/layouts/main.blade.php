@@ -32,10 +32,13 @@
         <script src="{{ asset('js/core/popper.min.js') }}"></script>
         <script src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
         <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
-        <!-- Plugin for the momentJs  -->
-        <script src="{{ asset('js/material-dashboard.js?v=2.1.1" type="text/javascript') }}"></script>
+        
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-       
+        <script src="{{ asset('js/material-dashboard.js?v=2.1.1" type="text/javascript') }}"></script>
+        
+        <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables.min.js"></script>
+
         <script src="{{ asset('js/settings.js') }}"></script>
         @stack('js')
     </body>

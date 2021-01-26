@@ -6,7 +6,7 @@
   -->
   <div class="logo">
     <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+      {{ __('COER PANEL') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -20,7 +20,7 @@
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i><img style="width:25px" src="{{ asset('img/laravel.svg') }}"></i>
-          <p>{{ __('Laravel Examples') }}
+          <p>{{ __('Manejo de Usuarios') }}
             <b class="caret"></b>
           </p>
         </a>
@@ -28,14 +28,14 @@
           <ul class="nav">
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="#">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
+                <span class="sidebar-mini"> PU </span>
+                <span class="sidebar-normal">{{ __('Perfil de Usuario') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('users.index') }}">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
+                <span class="sidebar-mini"> MU </span>
+                <span class="sidebar-normal"> {{ __('Manejo de Usuario') }} </span>
               </a>
             </li>
           </ul>
@@ -77,12 +77,7 @@
           <p>{{ __('RTL Support') }}</p>
         </a>
       </li>
-      <li class="nav-item active-pro{{ $activePage == 'upgrade' ? ' active' : '' }}">
-        <a class="nav-link text-white bg-danger" href="#">
-          <i class="material-icons text-white">unarchive</i>
-          <p>{{ __('Upgrade to PRO') }}</p>
-        </a>
-      </li>
+      
     </ul>
   </div>
 </div>
