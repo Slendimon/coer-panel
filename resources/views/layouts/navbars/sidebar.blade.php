@@ -42,9 +42,9 @@
         </div>
       </li>
       <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('emergencies.index') }}">
           <i class="material-icons">content_paste</i>
-            <p>{{ __('Table List') }}</p>
+            <p>{{ __('Emergencias') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">
