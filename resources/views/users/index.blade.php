@@ -42,15 +42,17 @@
                                                     <td>{{ $user->email}}</td>
                                                     <td>{{ $user->created_at}}</td>
                                                     <td class="td-actions text-right">
-                                                        <button class="btn  btn-info" type="button">
-                                                            <i class="material-icons">person</i>
-                                                        </button>
-                                                        <button class="btn btn-warning" type="button">
-                                                            <i class="material-icons">edit</i>
-                                                        </button>
-                                                        <button class="btn btn-danger" type="button">
-                                                            <i class="material-icons">close</i>
-                                                        </button>
+                                                        
+                                                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-info"><i class="material-icons">person</i></a>
+                                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-danger"><i class="material-icons">edit</i></a>
+                                                        <form action="{{ route('users.destroy', $user->id) }}" method="post" style="display: inline-block;" onsubmit="return confirm('Estas Seguro?')">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn btn-danger" type="submit">
+                                                                <i class="material-icons">close</i>
+                                                            </button>
+                                                        </form>
+                                                        
                                                     </td>
                                                 </tr>
                                             @endforeach

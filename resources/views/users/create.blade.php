@@ -12,35 +12,44 @@
                                 <p class="card-category">Ingresar datos</p>
                             </div>
                             <div class="card-body">
+                                @if($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>                                                
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                                 <div class="row mt-2">
                                     <label for="name" class="col-sm-2 col-form-label">Nombre</label>
                                     <div class="col-sm-7">
-                                        <input type="text" class="form-control" name="name" placeholder="Ingrese su nombre" autofocus>
+                                        <input type="text" class="form-control" name="name" placeholder="Ingrese su nombre" value="{{ old('name') }}" autofocus>
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <label for="username" class="col-sm-2 col-form-label">Nombre de usuario</label>
                                     <div class="col-sm-7">
-                                        <input type="text" class="form-control" name="username" placeholder="Ingrese su nombre de usuario" autofocus>
+                                        <input type="text" class="form-control" name="username" placeholder="Ingrese su nombre de usuario" value="{{ old('username') }}">
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <label for="email" class="col-sm-2 col-form-label">Correo</label>
                                     <div class="col-sm-7">
-                                        <input type="email" class="form-control" name="email" placeholder="Ingrese correo" autofocus>
+                                        <input type="email" class="form-control" name="email" placeholder="Ingrese correo" value="{{ old('email') }}">
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
                                     <div class="col-sm-7">
-                                        <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña" autofocus>
+                                        <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña">
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer ml-auto mr-auto">
                                 <button type="submit" class="btn btn-primary">{{ __('Guardar Usuario') }}</button>
-                              </div>
                             </div>
+                            
                         </div>
                     </form>
                 </div>
